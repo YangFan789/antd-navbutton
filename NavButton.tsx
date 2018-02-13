@@ -1,8 +1,9 @@
 import { Button } from "antd";
 import { ButtonProps } from "antd/lib/button";
 import * as H from "history";
+import { pickBy } from "lodash";
 import * as React from "react";
-import { Link, RouteComponentProps, withRouter } from "react-router-dom";
+import { Link, Route, RouteComponentProps, withRouter } from "react-router-dom";
 
 export interface INavButtonProps extends ButtonProps, RouteComponentProps<any> {
   to: H.LocationDescriptor;
@@ -24,16 +25,19 @@ class NavButton extends React.Component<INavButtonProps> {
 
   public render() {
     const { to, children, replace } = this.props;
+    const buttonProps = this.spiltButtonProps(this.props);
     return (
-      <Button {...this.props} onClick={this.onClickProxy}>
-        <Link
-          style={{ textDecoration: "none" }}
-          ref={ref => (this.link = ref)}
-          to={to}
-          replace={replace}
-        >
-          {children}
-        </Link>
+      <Button {...buttonProps} onClick={this.onClickProxy}>
+        <Route>
+          <Link
+            style={{ textDecoration: "none" }}
+            ref={ref => (this.link = ref)}
+            to={to}
+            replace={replace}
+          >
+            {children}
+          </Link>
+        </Route>
       </Button>
     );
   }
@@ -46,6 +50,22 @@ class NavButton extends React.Component<INavButtonProps> {
       this.link.handleClick(e);
     }
   };
+
+  private spiltButtonProps(props: INavButtonProps): object {
+    return pickBy(
+      {
+        ...props,
+        children: undefined,
+        history: undefined,
+        location: undefined,
+        match: undefined,
+        replace: undefined,
+        staticContext: undefined,
+        to: undefined,
+      },
+      (v: any) => v !== undefined,
+    );
+  }
 }
 
 export default withRouter(NavButton);
