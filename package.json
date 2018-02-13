@@ -1,6 +1,6 @@
 {
   "name": "antd-navbutton",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "react-router navigation button in antd style.",
   "main": "index.ts",
   "author": "YangFan789@outlook.com <YangFan789@outlook.com>",
