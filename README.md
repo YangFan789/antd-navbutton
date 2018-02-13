@@ -11,8 +11,8 @@ yarn add antd-navbutton
 ## Usage
 
 ```jsx
-import NavButton from "antd-navbutton";
-const button = <NavButton to="/home" replace={false}/>;
+import { NavButton } from "antd-navbutton";
+const button = <NavButton to="/home" replace={false} />;
 ```
 
 `NavButton` component is fully compatible with `antd`'s Button. Usage consistent with `Button` and `Link`. When you click `NavButton`, the button's `onClick` event is fired first, then the navigation event is fired.
