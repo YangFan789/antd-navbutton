@@ -1,1 +1,1 @@
-export * from "./NavButton";
+export default "./NavButton";
