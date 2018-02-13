@@ -19,9 +19,9 @@ const button = <NavButton to="/home" replace={false} />;
 
 References：
 
-[react-router-dom Link component](http://reacttraining.cn/web/api/Link)
+[react-router-dom Link component](http://reacttraining.com/react-router/web/api/Link)
 
-[antd Button component](https://ant.design/components/button-cn/)
+[antd Button component](https://ant.design/components/button/)
 
 ## License
 
