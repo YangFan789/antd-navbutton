@@ -1,0 +1,21 @@
+{
+  "name": "antd-navbutton",
+  "version": "0.0.1",
+  "description": "react-router navigation button in antd style.",
+  "main": "index.ts",
+  "author": "YangFan789@outlook.com <YangFan789@outlook.com>",
+  "license": "MIT",
+  "private": false,
+  "peerDependencies": {
+    "antd": "^3.2.1",
+    "history": "^4.7.2",
+    "react": "^16.2.0",
+    "react-router-dom": "^4.2.2"
+  },
+  "devDependencies": {
+    "@types/antd": "^1.0.0",
+    "@types/history": "^4.6.2",
+    "@types/react": "^16.0.37",
+    "@types/react-router-dom": "^4.2.4"
+  }
+}
