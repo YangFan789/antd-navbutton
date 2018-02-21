@@ -19,7 +19,7 @@ class NavButton extends React.Component<INavButtonProps> {
 
   public constructor(props: INavButtonProps) {
     super(props);
-    this.onClickProxy.bind(this);
+    this.onClickProxy = this.onClickProxy.bind(this);
     this.link = null;
   }
 
