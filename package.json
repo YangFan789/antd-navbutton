@@ -6,6 +6,10 @@
   "author": "YangFan789@outlook.com <YangFan789@outlook.com>",
   "license": "MIT",
   "private": false,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/YangFan789/antd-navbutton"
+  },
   "peerDependencies": {
     "antd": "^3.2.1",
     "history": "^4.7.2",
